@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+:root {
+  --primary-color: #5d5fef;
+  --primary-color-dark: #4b4dbf;
+  --secondary-color: #131516;
+  --text-dark: #333333;
+  --text-light: #767268;
+  --extra-light: #f8f8f8;
+  --white: #ffffff;
+}
+* {
+  padding: 0;
+  margin: 0x;
+  box-sizing: border-box;
+}
+.section__container{
+  background-color: var(--extra-light);
+  margin: 20px;
+  border-radius: 10px;
+}
+.section__header {
+  margin-bottom: 5px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.section__subheader {
+  color: var(--text-light);
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn__primary {
+  color: var(--text-dark);
+  border: 2px solid var(--text-light);
+  background-color: transparent;
+}
+
+.btn__secondary {
+  color: var(--text-dark);
+  border: 2px solid var(--text-light);
+  background-color: transparent;
+  
+}
+
+.btn__primary:hover {
+  background-color: #bae2ef;
+  border-color: white;
+  color: var(--white);
+}
+
+.btn__secondary:hover {
+  background-color: #bae2ef;
+  border-color: white;
+  color: var(--white);  
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+      font-family: 'Montserrat'; 
+    overflow-x: hidden;
+
+}
+.sticky {
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    background: var(--extra-light);
+    border-radius: 10px;
+    margin: 5px;
+}
+.nav__bar {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.nav__logo {
+  flex: 1;
+}
+
+.nav__logo a {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link a {
+  padding: 5px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.link a:hover {
+  color: var(--primary-color);
+    
+}
+
+.nav__btns {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+@media (width < 600px) {
+  .nav__links {
+    display: none;
+  }
+
+  .contact__content .form__group {
+    gap: 1rem;
+  }
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 5rem;
+  color: var(--text-dark);
+}
+
+h2{
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+p {    
+  color: var(--text-light);
+}
+
+.header__btns {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.prog_desc{
+    padding-bottom: 10px;
+}
+.all__container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+   
+}
+.all__container img{
+    width: 100%;
+    height: 90%;
+    border-radius: 10px;
+    padding:5px;
+    cursor: pointer;
+}
+.header__content_Img, .prog__content_Img, .test__content_Img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Elrejti a képen kívüli részeket */
+}
+.test__content, .prog__content, .header__content {
+  width: 40%;
+}
+.test__content_Img, .prog__content_Img, .header__content_Img {
+  width: 60%;
+}
+.all__container img, 
+.header__content_Img img, 
+.prog__content_Img img, 
+.test__content_Img img {
+    width: 100%;
+    height: auto; /* Megtartja a kép eredeti arányait */
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    object-fit: cover; /* Arányok megtartása mellett kitölti a konténert */
+    image-rendering: -webkit-optimize-contrast; /* Webkit böngészők számára */
+    image-rendering: crisp-edges; /* Egyéb böngészők számára */
+    image-rendering: pixelated; /* Képek pixel-perfekt megjelenítése */
+}

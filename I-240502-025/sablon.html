@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en"id="example">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+
+    
+    <link rel="stylesheet" type="text/css" href="../Style/ticket.css">
+    <link rel="stylesheet" href="/prog/Knowledge base/Style/ticket.css"/>
+    <link rel="stylesheet" href="Style/ticket.css">
+
+    <title>hibajegy</title>
+      
+  </head>
+  <body class="body" id="body">
+    <nav class="sticky" id ='sticky'>
+      <div class="nav__bar">
+        <div class="nav__logo"><a id="linkToChange" href="https://tdp.kgir.hu/tas/secure/mango/window/18?t=1715328521391">I-240502-025</a></div>
+        <ul class="nav__links">
+          <li class="link"><a href="#pontazna">Hibajegy leírás</a></li>
+          <li class="link"><a href="#prog">Javítás, fejlesztés</a></li>
+          <li class="link"><a href="#test">Teszt</a></li>
+          <li class="link"><a href="#transport">Transport</a></li>
+        </ul>
+        <div class="nav__btns">
+            <a href="../index.html">
+                <button class="btn btn__primary">Kezdőlap</button>
+            </a>
+            <a href="../am_tickets.html">
+                <button class="btn btn__secondary">Hibajegyek oldal</button>
+            </a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="header" id="header">
+      <div class="section__container header__container all__container">
+        <div class="header__content" id="header_content">
+          <h1 id="Hibajegy rövid leírása">ZAM_KORR_JAV tranzakció bővítése(NATO anyagosztály módosítása)</h1>
+          <h2 id="Hibajegy d">Hibajegy feladója - Dobos András</h2>
+          <h2 id="Hibajegy d">Hibajegy dátuma - 2024.05.02.</h2>
+          <p id="Leírás">Kérjük a ZAM_KORR_JAV tranzakció kezdőfelületét egy harmadik opcióval kibővíteni, ami a "NATO anyagosztály módosítása" lehetőséget nyújtja.
+          </p>
+          <p id="Leírás">Második </p>
+          <p id="Leírás">harmadik </p>
+          <div class="header__btns" >
+              <a id="linkUrl1" href="https://tdp.kgir.hu/tas/secure/mango/window/18?t=1715328521391">
+                <button class="btn btn__secondary">Hibajegy megnyitás</button>
+              </a>
+          </div>
+        </div>
+        <div class="header__content_Img" id="header_content_Img"> 
+          <img class="headerImg" id="headerImg"  src="../I-240502-025/image/zamkorrjavx.jpg">
+          <input type="file" id="imageInput" accept="image/*" style="display: none;">
+        </div>
+      </div>
+    </header>
+
+    
+    <section class="section__container" id="prog">
+
+        <div class="prog_desc" id="prog_desc">
+        <div class="prog all__container" id="prog all__container 1">        
+            <div class="prog__content" id="prog_content 1">
+                <h1 id="Hibajegy h1">Fejlesztés, javítás leírása</h1>
+                <h2 class="h2" id="Hibajegy d">Új igény</h2>
+                <p class="p" id="Leírás">A ZAM_KORR_JAV tranzakció további fejlesztése. </p>
+                <p class="p" id="Leírás">A jelen fejlesztési igény, hogy a "NATO anyagosztály módosítása" is elvégezhető legyen a felületen. Hasonlóan a korábbiakban fejlesztett "korrekciós kód" módosításhoz, itt is új - értékkészlet alapján - kiválasztását és ennek módosytását kell lehetővé tenni.</p>
+            </div>
+            <div class="prog__content_Img" id="prog_content_Img 0">
+                <img id="progImg 0"  src="image/zam_korr_jav.jpg">
+            </div>            
+        </div>   
+        </div>
+        
+    </section>
+    
+
+    <section class="section__container all__container" id="test">
+        
+        <div class="test_desc" id="test_desc">
+        <div class="test all__container" id="test all__container 1">        
+            <div class="test__content" id="test_content 1">
+                <h1>Teszt leírása</h1>
+                <h2>1. lépés</h2>
+                <h3>Tesztadat kiválasztás</h3>
+                <p>Egy olyan TE keresése, amely rendelkezik valamely NATO anyagosztály megjelöléssel</p>
+                <p>A kereséshez használható a ZAML2 és megtekintéshez az AS03 tranzakció.</p>
+            </div>
+            <div class="test__content_Img" id="test_content_Img 0">
+                <img id="testImg 0"  src="image/zamkorrjavt1.jpg">
+                </a>
+            </div>            
+        </div>
+        
+        
+        <div class="test all__container" id="test all__container 2">        
+          <div class="test__content" id="test_content 2">
+            <h2>2. lépés</h2>
+            <h3>Tesztadat kiválasztás</h3>
+                <p>ZAM_KORR_JAV tranzakció kezdőfelület:</p>
+                <p>A tranzakció kezdőfelületére felkerült egy „NATO anyagosztály módosítás” radiogomb. A módosításhoz ezen rádiógombot kell megjelölni.</p>
+            </div>
+            <div class="test__content_Img" id="test_content_Img 1">
+              <img id="testImg 1" src="image/zam_korr_jav_t2.jpg">
+            </div>            
+        </div>
+
+        <div class="test all__container" id="test all__container 3">        
+          <div class="test__content" id="test_content 3">
+            <h2>3. lépés</h2>
+            <h3>Tesztadat kiválasztás</h3>
+              <p>Az eszközszám és vállalat kód megadása után indítható a tranzakció:</p>
+              <p>A kiválasztott NATO anyagosztály beemelését követően a sor/sorok megjelölésével és mentés gombbal véglegesíthető a módosítás:</p>
+          </div>
+          <div class="test__content_Img" id="test_content_Img 2">
+            <img id="testImg 2" src="image/zam_korr_jav_t3.jpg">
+          </div>            
+      </div>
+
+      <div class="test all__container" id="test all__container 4">        
+        <div class="test__content" id="test_content 4">
+          <h2>4. lépés</h2>
+          <h3>Tesztadat kiválasztás</h3>
+            <p>Módosításra kerülő érték kiválasztása</p>
+            <p>A megjelenő képernyőn, az „Új érték” gomb meghívását követő megjelenő ablakon beírással vagy a további meghívható listából választható ki a módosításra kerülő NATO anyagosztály.</p>
+        </div>
+        <div class="test__content_Img" id="test_content_Img 3">
+          <img id="testImg 3" src="image/zam_korr_jav_t4.jpg">
+        </div>            
+    </div>
+
+    <div class="test all__container" id="test all__container 5">        
+      <div class="test__content" id="test_content 5">
+        <h2>5. lépés</h2>
+        <h3>Tesztadat kiválasztás</h3>
+          <p>A módosítás véglegesítése</p>
+          <p>A felületen megjelenik, hogy mely új érték kerül beállításra.</p>
+          <p>A sikeres módosításról visszaigazoló üzenet kerül megjelenítésre illetve megjelenik a felvett új érték az eszköz rekord mellett.</p>
+      </div>
+      <div class="test__content_Img" id="test_content_Img 4">
+        <img id="testImg 4" src="image/zam_korr_jav_t5.jpg">
+      </div>            
+  </div>
+
+  <div class="test all__container" id="test all__container 6">        
+    <div class="test__content" id="test_content 6">
+      <h2>6. lépés</h2>
+      <h3>Tesztadat kiválasztás</h3>
+          <p>A módosítás ellenőrzése</p>
+          <p>Módosítást követően a tárgyi eszköz - AS03 - törzsadatain megjelenik a módosított NATO anyagosztály.</p>
+      </div>
+      <div class="test__content_Img" id="test_content_Img 5">
+        <img id="testImg 5" src="image/zam_korr_jav_t6.jpg">
+      </div>            
+  </div>
+            
+            
+        </div>      
+      
+    </section>
+
+    <section class="section__container all__container" id="transport">
+        
+        <div class="transport_desc" id="transport_desc">
+        <div class="transport all__container" id="transport all__container">        
+            <div class="transport__content" id="transport_content">
+                <h1>Transport</h1>
+                <h2 class="h2" id="Transport">Bejátszandó transport</h2>
+                <p class="p" id="Leírás">ALFK923363       QMLIPTAI     ZAM_KORR_JAV - NATO anyagosztály módosítása (I-240502-025)</p>
+                <p class="p" id="Leírás">Esti ütemezéssel és felülírással bejátszandó a transzports</p>
+            </div>
+            <div>
+               
+            </div>            
+        </div>            
+        </div>           
+
+    </section>
+
+
+  </body>
+  
+</html>

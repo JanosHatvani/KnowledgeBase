@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Style/editor.css">
+    <title>editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar close">
+    <div class="logo-details">
+      <i><img src="Icons/icons8-hamburger-20.png"></i>
+    </div>
+    <div class="nav">
+    <ul class="nav-links">
+
+      <li>
+        <div class="iocn-link">
+          <a href="#" id="uploadhtml" onclick="uploadHtml()">
+            <i><img src="Icons/icons8-plus-22.png"></i>
+            <span class="link_name">Hibajegy létrehozása</span>
+          </a>
+        </div>
+      </li>
+
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i><img src="Icons/icons8-header-20.png"></i>
+            <span class="link_name">Fejléc</span>
+          </a>
+          <i class="arrow">
+            <img id="arrowimg0" src="Icons/icons8-chevron-down-20.png">
+          </i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Fejléc</a></li>
+          <li><a href="#" id="uploadheader" onclick="uploadHeader()">Fejléc hozzáadás</a></li>
+          <li><a href="#" onclick="openPopup()">Hibajegy szám szerkesztés</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i><img src="Icons/icons8-ticket-20.png"></i>
+            <span class="link_name">Hibajegy leírás</span>
+          </a>
+          <i class="arrow">
+            <img id="arrowimg1" src="Icons/icons8-chevron-down-20.png">
+          </i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Hibajegy leírás</a></li>
+          <li><a href="#" onclick="uploadTicketdesc()">Hibajegy leírás hozzáadás</a></li>
+          <li><a href="#" onclick="openPopup2()">Hibajegy leírás szerkesztés</a></li>
+          <li><a href="#" onclick="ticketdescH2Add()">H2 hozzáadás</a></li>
+          <li><a href="#" onclick="ticketdescPAdd()">P hozzáadás</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i><img src="Icons/icons8-code-20.png"></i>
+            <span class="link_name">Fejlesztés leírás</span>
+          </a>
+          <i class="arrow">
+            <img id="arrowimg2"  src="Icons/icons8-chevron-down-20.png">
+          </i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Fejlesztés leírás</a></li>
+          <li><a href="#" onclick="uploadProgdesc()">Fejesztés leírás hozzáadás</a></li>
+          <li><a href="#" onclick="openPopup3()">Fejlesztés leírás szerkesztés</a></li>
+          <li><a href="#" onclick="progdescH2Add()">H2 hozzáadás</a></li>
+          <li><a href="#" onclick="progdescPAdd()">P hozzáadás</a></li>
+          <li><a href="#" onclick="progdescContainerAdd()">Új bekezdés hozzáadás</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i><img src="Icons/icons8-test-20.png"></i>
+            <span class="link_name">Tesztelés</span>
+          </a>
+          <i class="arrow">
+            <img id="arrowimg3"  src="Icons/icons8-chevron-down-20.png">
+          </i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Tesztelés leírás</a></li>
+          <li><a href="#" onclick="uploadTestdesc()">Teszt leírás hozzáadás</a></li>
+          <li><a href="#" onclick="openPopup4()">Teszt leírás szerkesztés</a></li>
+          <li><a href="#" onclick="testdescH2Add()">H2 hozzáadás</a></li>
+          <li><a href="#" onclick="testdescH3Add()">H3 hozzáadás</a></li>
+          <li><a href="#" onclick="testdescPAdd()">P hozzáadás</a></li>
+          <li><a href="#" onclick="testdescContainerAdd()">Új bekezdés hozzáadás</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i><img src="Icons/icons8-truck-20.png"></i>
+            <span class="link_name">Transport</span>
+          </a>
+          
+          <i class="arrow">
+            <img id="arrowimg4" src="Icons/icons8-chevron-down-20.png">
+          </i>
+        
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Transport</a></li>
+          <li><a href="#"onclick="uploadTtransportdesc()">Transport hozzáadás</a></li>
+          <li><a href="#"onclick="openPopup5()">Transport szerkesztés</a></li>
+          <li><a href="#"onclick="transportdescH2Add()">H2 hozzáadás</a></li>
+          <li><a href="#"onclick="transportdescPAdd()">P hozzáadás</a></li>
+        </ul>
+      </li> 
+  </ul>
+</div>
+<div class="ticketcollectormod">
+
+  <li>
+    <div class="iocn-link">
+      <a href="#" id="addtickettohtml" onclick="showPopup()">
+        <i><img src="Icons/icons8-website-25.png"></i>
+        <span class="link_name">Hibajegy hozzáadás</span>
+      </a>
+    </div>
+  </li>
+
+  <li>
+    <div class="iocn-link">
+      <a href="#" id="modtickettohtml" onclick="openPopupForm3()">
+        <i><img src="Icons/icons8-change-25.png"></i>
+        <span class="link_name">Hibajegy módosítás</span>
+      </a>
+    </div>
+  </li>
+  
+</div>
+
+  <div class="sidebar_footer">
+    <a href="#" id="toggleButton" class="sidebar-link">
+      <i class="toggleIcon"><img src="Icons/icons8-toggle-on-40.png" id="toggleImage"></i>
+      <span id="editorOnOFF" class="link_name">Editor ON</span>
+    </a>
+  </div>  
+
+  </div>
+  <section class="home-section">
+    <div class="home-content">
+      
+      
+        <div class="bts_main_pr">
+          <button class="btns btns__primary" onclick="HtmlPartrefresh()">Újrakezdés</button>
+          <button class="btns btns__primary" onclick="saveHtmlPart()">Html mentése</button>
+
+          <!--<button class="btns btns__secondary" onclick="unlockFile()">Clear</button> --> 
+          
+           <button class="btns btns__secondary"  id="open" onclick="uploadFile()">Megnyitás</button>
+          <!-- <button class="btns btns__secondary" id="open" onclick="uploadFile()" disabled>Megnyitás</button> -->           
+          <input type="file" id="fileInput" accept=".html" />  
+          <!-- <p  id="lockStatus">Status: Unknown</p> -->
+                    
+        </div>
+
+        <div class="bts_main_sec">
+          <button class="btns btns__primary" onclick="htmlbackloadbtwwork()"><img class="btn_img" src="Icons/icons8-left-arrow-25 (1).png"></button>
+          <button class="btns btns__primary" onclick="htmlforwardloadbtwwork()"><img class="btn_img" src="Icons/icons8-right-arrow-25 (1).png"></button>
+          <button class="btns btns__primary" onclick="htmlsavebtwwork()">Mentés</button> 
+        </div>
+      
+      
+    </div>
+    
+   <div class="back"> 
+  
+      <div class="main">
+
+          <textarea id="editor"></textarea>
+          <iframe id="view"></iframe>
+          
+      </div>
+       
+   </div>
+  </section>
+
+  <div class="popup-overlay popupOverlay" id="popupOverlay"></div>
+  <div class="popup" id="popup">
+      <div id="popupContent1">
+        <label for="linkUrl">Új URL:</label>
+        <input type="text" id="linkUrl" name="linkUrl">
+        <label for="linkText">Új szöveg:</label>
+        <input type="text" id="linkText" name="linkText">
+        
+  </div>
+        <button type="button" onclick="modifyLink()">Módosítás</button>
+        <button type="button" onclick="closePopup()">Bezárás</button>
+  </div>
+
+  <div class="popup-overlay2 popupOverlay2" id="popupOverlay2"></div>
+  <div class="popup2" id="popup2">
+    <div id="popupContent"></div>
+      <button onclick="saveChanges()">Módosítás</button>
+      <button onclick="closePopup2()">Bezárás</button>
+  </div>
+
+  <div class="popup-overlay3" id="popupOverlay3"></div>
+  <div class="popup3" id="popup3">
+      <div id="popupContent2"></div>
+      <button onclick="saveChanges3()">Mentés</button>
+      <button onclick="closePopup3()">Bezárás</button>
+  </div>
+  
+  <div class="popup-overlay4" id="popupOverlay4"></div>
+  <div class="popup4" id="popup4">
+      <div id="popupContent3"></div>
+      <button onclick="saveChanges2()">Mentés</button>
+      <button onclick="closePopup4()">Bezárás</button>
+  </div>
+
+  <div id="popupOverlay5" class="popup-overlay5"></div>
+  <div id="popup5" class="popup5">
+      <div id="popupContent4"></div>
+      <button onclick="saveChanges4()">Mentés</button>
+      <button onclick="closePopup6()">Bezárás</button>
+  </div>
+
+  <div id="popupForm">
+    <div class="form-group">
+        <label for="imgFile">Kép tallózás:</label>
+        <input type="file" id="imgFile" name="imgFile" accept="image/*">
+    </div>
+    <div class="form-group">
+        <label for="imgAlt">Kép szöveg:</label>
+        <input type="text" id="imgAlt" name="imgAlt">
+    </div>
+    <div class="form-group">
+        <label for="iconHref">Hibajegy hivatkozás:</label>
+        <input type="text" id="iconHref" name="iconHref">
+    </div>
+    <div class="form-group">
+        <label for="contentH3">Hibajegy szám:</label>
+        <input type="text" id="contentH3" name="contentH3">
+    </div>
+    <div class="form-group">
+        <label for="contentP">Hibajegy szöveg:</label>
+        <input type="text" id="contentP" name="contentP">
+    </div>
+    <div class="form-group">
+        <label for="keywordOne">Kulcszó 1:</label>
+        <input type="text" id="keywordOne" name="keywordOne">
+    </div>
+    <div class="form-group">
+        <label for="keywordTwo">Kulcszó 2:</label>
+        <input type="text" id="keywordTwo" name="keywordTwo">
+    </div>
+    <div class="form-group">
+        <label for="keywordThree">Kulcszó 3:</label>
+        <input type="text" id="keywordThree" name="keywordThree">
+    </div>
+    <button onclick="addCard()">Hozzáadás</button>
+    <button onclick="closePopup5()">Bezárás</button>
+</div>
+
+<div id="popupForm4">
+  <div class="form-group">
+    <label for="displayImgFile">Új kép tallózása:</label>
+    <input type="file" id="displayImgFile" name="displayImgFile" accept="image/*">
+    <label for="displayImgSrc">Eredeti kép:</label>
+    <input type="text" id="displayImgSrc" name="displayImgSrc">
+</div>
+<div class="form-group">
+    <label for="displayImgAlt">Kép szöveg:</label>
+    <input type="text" id="displayImgAlt" name="displayImgAlt">
+</div>
+<div class="form-group">
+    <label for="displayHref">Hibajegy hivatkozás:</label>
+    <input type="text" id="displayHref" name="displayHref">
+</div>
+<div class="form-group">
+    <label for="displayH3">Hibajegy szám:</label>
+    <input type="text" id="displayH3" name="displayH3">
+</div>
+<div class="form-group">
+    <label for="displayP">Hibajegy szöveg:</label>
+    <input type="text" id="displayP" name="displayP">
+</div>
+<div class="form-group">
+    <label for="displayKeywordOne">Kulcszó 1:</label>
+    <input type="text" id="displayKeywordOne" name="displayKeywordOne">
+</div>
+<div class="form-group">
+    <label for="displayKeywordTwo">Kulcszó 2:</label>
+    <input type="text" id="displayKeywordTwo" name="displayKeywordTwo">
+</div>
+    <div class="form-group">
+        <label for="displayKeywordThree">Kulcszó 3:</label>
+        <input type="text" id="displayKeywordThree" name="displayKeywordThree">
+    </div>
+    <button onclick="saveCard()">Mentés</button>
+    <button onclick="closePopupForm4()">Bezárás</button>
+</div>
+
+ <!-- Popup Form 3 -->
+ <div id="popupForm3">
+  <div class="form-group">
+      <label for="searchH3">Hibajegy szám:</label>
+      <input type="text" id="searchH3" name="searchH3">
+  </div>
+  <button onclick="searchCard()">Keresés</button>
+  <button onclick="closePopupForm3()">Bezárás</button>
+</div>
+
+<!-- Popup Form 2 -->
+<div id="popupForm2">
+  <div class="form-group">
+      <label for="imgFile">Kép tallózás:</label>
+      <input type="file" id="imgFile" name="imgFile" accept="image/*">
+  </div>
+  <div class="form-group">
+      <label for="imgAlt">Kép szöveg:</label>
+      <input type="text" id="imgAlt" name="imgAlt">
+  </div>
+  <div class="form-group">
+      <label for="iconHref">Hibajegy hivatkozás:</label>
+      <input type="text" id="iconHref" name="iconHref">
+  </div>
+  <div class="form-group">
+      <label for="contentH3">Hibajegy szám:</label>
+      <input type="text" id="contentH3" name="contentH3">
+  </div>
+  <div class="form-group">
+      <label for="contentP">Hibajegy szöveg:</label>
+      <input type="text" id="contentP" name="contentP">
+  </div>
+  <div class="form-group">
+      <label for="keywordOne">Kulcszó 1:</label>
+      <input type="text" id="keywordOne" name="keywordOne">
+  </div>
+  <div class="form-group">
+      <label for="keywordTwo">Kulcszó 2:</label>
+      <input type="text" id="keywordTwo" name="keywordTwo">
+  </div>
+  <div class="form-group">
+      <label for="keywordThree">Kulcszó 3:</label>
+      <input type="text" id="keywordThree" name="keywordThree">
+  </div>
+  <button onclick="savehtml()">Mentés</button>
+  <button onclick="closePopupForm2()">Bezárás</button>
+</div>
+
+  <script src="Js/script.js"></script>
+  <script src="Js/editorsave.js"></script>
+  <script src="JS/editorload.js"></script>
+  <script src="Js/edtiorOnOff.js"></script>
+  <script src="Js/editorcommands.js"></script>
+  <script src="Js/editorticketdescmod.js"></script>
+  <script src="Js/editorticknumbermod.js"></script>
+  <script src="Js/editorprogdescmod.js"></script>
+  <script src="Js/editortestdescmod.js"></script>
+  <script src="Js/editortransportdescmod.js"></script>
+  <script src="Js/ticketaddtohtml.js"></script>
+  <script src="Js/ticketmodtohtml.js"></script>
+  <script src="Js/htmlsavebfload.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bejelentkezés</title>
+    <link rel="stylesheet" href="Style/login.css">
+</head>
+<body>
+  
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <h2 class="active"> Bejelentkezés </h2>
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="Icons/brain-14-svgrepo-com.svg" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form action="Src/login.php" method="POST">
+      <input type="text" id="username" class="fadeIn second" name="username" placeholder="Felhasználónév" required>
+      <input type="password" id="password" class="fadeIn third" name="password" placeholder="Jelszó" required>
+      <input type="submit" class="fadeIn fourth" value="Bejelentkezés">
+    </form>
+  </div>
+</div>
+  
+</body>
+</html>
