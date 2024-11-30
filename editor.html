@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="Style/editor.css">
+
+    <script src="https://unpkg.com/lowdb@2.0.0/dist/lowdb.min.js"></script>
+    <script src="https://unpkg.com/lowdb@2.0.0/dist/Low.js"></script>
+   
     <title>editor</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
@@ -150,17 +154,15 @@
   </div>
   <section class="home-section">
     <div class="home-content">
-      
-      
+            
         <div class="bts_main_pr">
           <button class="btns btns__primary" onclick="HtmlPartrefresh()">Újrakezdés</button>
           <button class="btns btns__primary" onclick="saveHtmlPart()">Html mentése</button>
 
-          <!--<button class="btns btns__secondary" onclick="unlockFile()">Clear</button> --> 
-          
-           <button class="btns btns__secondary"  id="open" onclick="uploadFile()">Megnyitás</button>
-          <!-- <button class="btns btns__secondary" id="open" onclick="uploadFile()" disabled>Megnyitás</button> -->           
-          <input type="file" id="fileInput" accept=".html" />  
+          <button class="btns btns__secondary" onclick="unlockFile()">Clear</button>
+          <button class="btns btns__secondary"  id="open" onclick="uploadfile()"">Megnyitás</button> 
+          <input type="file" id="fileInput" accept=".html"/> 
+
           <!-- <p  id="lockStatus">Status: Unknown</p> -->
                     
         </div>
@@ -353,7 +355,7 @@
 
   <script src="Js/script.js"></script>
   <script src="Js/editorsave.js"></script>
-  <script src="JS/editorload.js"></script>
+
   <script src="Js/edtiorOnOff.js"></script>
   <script src="Js/editorcommands.js"></script>
   <script src="Js/editorticketdescmod.js"></script>
@@ -364,6 +366,7 @@
   <script src="Js/ticketaddtohtml.js"></script>
   <script src="Js/ticketmodtohtml.js"></script>
   <script src="Js/htmlsavebfload.js"></script>
-  
+  <script src="editorload.js"></script>
+
 </body>
 </html>
