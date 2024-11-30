@@ -407,6 +407,23 @@ input#fileInput {
   padding-right: 15px;
   background-color: transparent;
 }
+input#statusFileInput {
+  padding: 2px;
+  border-radius: 10px;  
+  margin: 10px;
+  padding-right: 15px;
+  background-color: transparent;
+  visibility: hidden;
+}
+#lockStatus {
+  padding: 2px;
+  border-radius: 10px;  
+  margin: 18px;
+  padding-right: 15px;
+  background-color: transparent;
+  
+}
+
 input.textbox{
   padding:110px;
   font-size:14px;

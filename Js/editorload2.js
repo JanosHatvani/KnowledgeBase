@@ -1,46 +1,3 @@
-function uploadFile() {
-    const fileInput = document.getElementById('fileInput');
-    const file = fileInput.files[0];
-
-    if (file && file.type === "text/html") {
-        const fileName = file.name;
-
-        if (fileName === 'am_tickets.html' || fileName === 'fi_tickets.html' || fileName === 'mm_tickets.html') {
-            uploadStatusFile(); 
-        }
-
-        else{
-        const reader = new FileReader();
-        reader.onload = function(event) {
-            const content = event.target.result;
-            var iframe = document.getElementById('view');
-            var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-            var example = iframeDocument.getElementById('example');            
-            if (example) {
-                    alert('A szerkesztése már megkezdted, az editor már feltöltésre került.');
-            } 
-            else {
-                    // A tartalom betöltése az 'editor' id-vel rendelkező div-be
-                    document.getElementById('editor').innerHTML = content;
-                    // Kivonatolás és a kívánt tartalom megjelenítése
-                    extractAndDisplayContent(content);
-                    jumpToTextarea();
-                    refresh();
-                    // Ha nincs lockolva, lockoljuk a fájlt
-                    localStorage.setItem('fileLock', 'locked');
-                    // Fájl neve elmentése a localStorage-be
-                    localStorage.setItem('loadedFileName', fileName);
-            }
-            
-        };
-        reader.readAsText(file);
-    } 
-    }   
-    else {
-        alert('Kérlek tölts fel egy érvényes HTML fájlt.');
-    }
-}
-
 function uploadStatusFile() {
     const fileInput = document.getElementById('statusFileInput');
     fileInput.style.visibility = "visible";
@@ -84,11 +41,9 @@ function updateStatusFile(newStatus) {
     const dateString = currentDate.toLocaleString(); // Dátum és idő formázása
 
     // Számítógép neve (itt a userAgent helyett érdemesebb lehet egy konkrét név használata)
-     // Ez a teljes user agent stringet adja vissza
-    var WinNetwork = new ActiveXObject("WScript.Network");
-    const computerName = WinNetwork.UserName; //window.navigator.userAgent;
-    
- 
+    const computerName = window.navigator.userAgent; // Ez a teljes user agent stringet adja vissza
+    //window.navigator.userActivation.
+
     // A cellák tartalma (A1, B1, C1)
     const data = [
         [newStatus, dateString, computerName] // Itt adjuk meg a státuszt, dátumot, számítógép nevét
@@ -132,10 +87,23 @@ function uploadFiletoTicketsMod() {
     }
 }
 
+// A többi funkció változatlan marad
 
-//window.addEventListener('load', function() {
-  //HtmlPartrefresh(); // Opcióként használható, ha az oldal frissítésekor is törölni szeretnéd a tartalmat
-//});
+
+// Lock feloldása (pl. egy másik gombbal vagy az oldal elhagyásakor)
+function unlockFile() {
+    localStorage.removeItem('fileLock');
+    localStorage.removeItem('loadedFileName');
+    alert('A fájl lock feloldva.');
+}
+
+window.addEventListener('beforeunload', function() {
+    // Az oldal elhagyásakor a fájl neve törlése a localStorage-ból
+    localStorage.removeItem('fileLock');
+    localStorage.removeItem('loadedFileName');
+    alert('A fájl lock feloldva.');
+});
+
 
 function extractAndDisplayContent(htmlContent) {
             // Ide írhatod azt a logikát, amivel kivonatolod a kívánt tartalmat

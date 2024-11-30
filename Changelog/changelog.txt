@@ -1,7 +1,0 @@
-Hotfix:
-2024.09.17.
-Újrakezdés bug javítás. Bizonyos esetekben nem törölte megfelelően az editor és az iframe tartalmát.
-
-Feature:
-2024.09.20
-AM,FI,MM tickets oldalak foglaltságának beépítése, amely által egyszerre csak egy személy tudja szerkeszteni. 
